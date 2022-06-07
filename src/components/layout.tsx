@@ -35,10 +35,10 @@ const data = {
 ],
     projects: [
     {
-        title: "Rust P2P",
+        title: "Rust P2P Typeracer",
         for_i: "",
-        info: "",
-        skills: [],
+        info: "A Rust Typeracer CLI program. Utilizes libp2p for communication. User can initiate a peer, connect peers locally, and begin a race. On completion of provided sentence, winner is broadcast to all participating nodes.",
+        skills: ["Rust", "libp2p"],
         start: "",
         end: "",
         link: "https://github.com/vaughanlove/rust-p2p",
@@ -46,8 +46,8 @@ const data = {
     {
         title: "Altcoin Screener - WIP",
         for_i: "",
-        info: "",
-        skills: [],
+        info: "A screener made for dex-based coins on sushiswap/uniswap currently. Pulled hourly historical data such as transactions, volume, unique addresses, etc, and trained a RL model to predict 24/48 hour price action. Currently a basic visualizer deployed.",
+        skills: ["Node.js", "Pytorch", "Vue", "express.js"],
         start: "",
         end: "",
         link: "https://github.com/vaughanlove/eb_screener_ui",
@@ -55,8 +55,8 @@ const data = {
     {
         title: "Autonomous Navigation",
         for_i: "",
-        info: "",
-        skills: [],
+        info: "School project where goal was to design a algorithm to enable a rover model to traverse a environment covered in obstacles. Rover was equipped with a LIDAR sensor and the 2D grid environment was modelled using it as the rover moved throughout the terrain.",
+        skills: ["Python", "Grid traversal algorithms", "Machine Vision"],
         start: "",
         end: "",
         link: "https://github.com/vaughanlove/autonomous-navigation",
@@ -64,8 +64,8 @@ const data = {
     {
         title: "Cyber Fridge",
         for_i: "",
-        info: "",
-        skills: [],
+        info: "Web Application that allows a user to input ingredients on hand, and recieve an eligible recipe containing those ingredients as a result. Scraped 60k recipes and created a Neo4j db with the ingredients, recipes as nodes, and a INGREDIENT_IN relation to all the recipe nodes they're present in. Flask API for querying the db.",
+        skills: ["Neo4j db", "Python web scraping", "python flask api", "Vue"],
         start: "",
         end: "",
         link: "https://github.com/vaughanlove/cyber-fridge",
@@ -98,7 +98,26 @@ const data = {
         start: "",
         end: "",
         link: "",
-    }],
+    },
+    {
+        title: "ML Dev",
+        for_i: "InQubate",
+        info: "Developed a notification manager for market. Presented at the Canadian Undergraduate Conference on Artificial Intelligence.",
+        skills: [],
+        start: "",
+        end: "",
+        link: "",
+    },
+    {
+        title: "Delegate",
+        for_i: "CIRQUE",
+        info: "Conference on Industry and Resources Queen’s University Engineering.",
+        skills: [],
+        start: "",
+        end: "",
+        link: "",
+    },
+],
 }
 
 // name and description + contact info
@@ -176,7 +195,8 @@ const Layout = ({pageTitle, children}) => {
                     <ContactHeader>
                         <a href="https://github.com/vaughanlove" target="_blank">GitHub</a><br></br>
                         <a href="https://www.linkedin.com/in/vaughan-love/" target="_blank">LinkedIn</a><br></br>
-                        Contact Me
+                        <a href="mailto:vaughan.e.love@gmail.com" target="_blank">vaughan.e.love@gmail.com</a><br></br>
+
                     </ContactHeader>
                 </TopHeader>
             </TitleBar>
