@@ -1,24 +1,30 @@
 import * as React from 'react';
 import styled from "@emotion/styled";
+import {motion} from 'framer-motion';
+import { useState } from 'react';
 
-
-const EntryCard = styled.main`
-    background-color: white;
-    border: 5px solid black;
-    align-self: center;
-    margin-top: 2rem; 
-`
+const card = {
+    backgroundColor: "lightblue",
+    alignSelf: "center",
+    marginTop: "2rem",
+    width: "30%",
+}
 
 const ListDropdown = ({title, for_i, info, start, end}) => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <EntryCard>
-            <h2>{title}</h2>
-            <h3>{for_i}</h3>
-            <h3>{info}</h3>
-            <h3>{start}</h3>
-            <h3>{end}</h3>
-        </EntryCard>
-    )
+            <motion.div layout whileHover={{ scale: 1.1 }} onClick={() => setIsOpen(!isOpen)} style={card}>
+                <motion.h2 layout>{title}</motion.h2>
+                <motion.h3 layout> {for_i}  |   {start} to {end}</motion.h3>
+                {isOpen && (
+                <motion.div >
+                    <p>{info}</p>
+                </motion.div>
+                )}
+                
+            </motion.div>
+                )
 }
 
 export default ListDropdown

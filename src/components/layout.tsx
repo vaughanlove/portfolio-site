@@ -8,16 +8,16 @@ const data = {
     education: [{
         title: "Applied Mathematics Engineering",
         for_i: "Queen's University",
-        info: "Applied mathematics engineering at Queen's University with the computing option",
-        start: "01/09/2019",
-        end: "01/06/2023",
+        info: "Applied mathematics engineering at Queen's University with the computing option.",
+        start: "2019",
+        end: "2023",
     },
     {
-        title: "Applied Mathematics Engineering",
-        for_i: "Queen's University",
-        info: "Applied mathematics engineering at Queen's University with the computing option",
-        start: "01/09/2019",
-        end: "01/06/2023",
+        title: "High School",
+        for_i: "Western Canada Highschool",
+        info: "",
+        start: "2016",
+        end: "2019",
     },
 ],
     experience: [{
@@ -106,10 +106,13 @@ const CategoryButton = styled.button`
         border-left: 1px solid #1C2321;
         border-top: 1px solid #1C2321;
         border-bottom: 4px solid #1C2321;
-    }
+    }S
 `
 
 const Layout = ({pageTitle, children}) => {
+    const [itemName, setItemName] = useState("education");
+
+
     return (
         <div>
             <title>{pageTitle}</title>
@@ -128,11 +131,13 @@ const Layout = ({pageTitle, children}) => {
             </TitleBar>
             
             <CategoryBar>
-                {Object.keys(data).map(category =>
-                    <CategoryButton >{category}</CategoryButton>)}
+                {Object.keys(data).map(category => (
+                    <CategoryButton onClick={() => setItemName(category)}>{category}</CategoryButton>
+                    )
+                )}
             </CategoryBar>
 
-            {renderList('education')}
+            {renderList(itemName)}
 
             <main>
                 {children}
