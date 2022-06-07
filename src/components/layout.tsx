@@ -21,30 +21,60 @@ const data = {
     },
 ],
     experience: [{
-        title: "Applied Mathematics Engineering",
-        for_i: "Queen's University",
+        title: "Quantitative Developer - Contract",
+        for_i: "Feta Markets",
         info: "",
-        start: "",
-        end: "",
-    }],
+        start: "MAY 2022",
+        end: "present",
+    },
+    {
+        title: "Quantitative Analyst - Contract",
+        for_i: "Global Predictions",
+        info: "",
+        start: "MAY 2021",
+        end: "JAN 2022",
+    },
+    {
+        title: "Student Researcher",
+        for_i: "University of Calgary",
+        info: "",
+        start: "MAY 2021",
+        end: "AUG 2021",
+    },
+],
     projects: [{
-        title: "Applied Mathematics Engineering",
-        for_i: "Queen's University",
+        title: "Cyber Fridge",
+        for_i: "",
         info: "",
         start: "",
         end: "",
-    }],
-    skills: [{
-        title: "Applied Mathematics Engineering",
-        for_i: "Queen's University",
+    },
+    {
+        title: "Rust P2P",
+        for_i: "",
         info: "",
         start: "",
         end: "",
-    }],
+    },
+    {
+        title: "Mars Rover",
+        for_i: "",
+        info: "",
+        start: "",
+        end: "",
+    },
+    {
+        title: "Altcoin Screener - WIP",
+        for_i: "",
+        info: "",
+        start: "",
+        end: "",
+    },
+],
     activities: [{
-        title: "Applied Mathematics Engineering",
-        for_i: "Queen's University",
-        info: "",
+        title: "Solana Global Fellowship",
+        for_i: "Solana Labs",
+        info: "had the opportunity in November 2021 for Solana Labs to sponsor me to come to their conference in Lisbon, Portugal as a Global Fellow. ",
         start: "",
         end: "",
     }],
@@ -124,7 +154,7 @@ const Layout = ({pageTitle, children}) => {
                     </NameHeader>
                     <ContactHeader>
                         <a href="https://github.com/vaughanlove" target="_blank">GitHub</a><br></br>
-                        <a href="https://github.com/vaughanlove" target="_blank">LinkedIn</a><br></br>
+                        <a href="https://www.linkedin.com/in/vaughan-love/" target="_blank">LinkedIn</a><br></br>
                         Contact Me
                     </ContactHeader>
                 </TopHeader>
