@@ -132,7 +132,10 @@ const Layout = ({pageTitle, children}) => {
             
             <CategoryBar>
                 {Object.keys(data).map(category => (
-                    <CategoryButton onClick={() => setItemName(category)}>{category}</CategoryButton>
+                    <CategoryButton 
+                        style={category==itemName ? {backgroundColor: '#A9B4C2', borderRight: '4px solid #1C2321', borderLeft: '1px solid #1C2321', borderTop: '1px solid #1C2321', borderBottom: '4px solid #1C2321'}: {}} 
+                        onClick={() => setItemName(category)}
+                        >{category}</CategoryButton>
                     )
                 )}
             </CategoryBar>
