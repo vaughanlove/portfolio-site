@@ -6,13 +6,14 @@ import { LayoutGroup } from "framer-motion"
 const ListCard = styled.main`
     display: flex;
     flex-direction: column;
+    background-color: #EEF1EF;
 
 `
 
 const List = (info) => {
     return (
         <LayoutGroup>
-            <ListCard>
+            <ListCard >
                 {info.info.map((item: string, index: number) => {
                     return <ListDropdown {...info.info[index]}></ListDropdown>
                 })}
