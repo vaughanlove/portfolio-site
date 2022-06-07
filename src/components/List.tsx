@@ -7,7 +7,7 @@ const ListCard = styled.main`
     display: flex;
     flex-direction: column;
     background-color: #EEF1EF;
-
+    padding-bottom: 15rem;
 `
 
 const List = (info) => {

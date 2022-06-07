@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 const pageStyles = {
   backgroundColor: "#EEF1EF",
   position: "absolute",
-  fontFamily: "Raleway, Roboto, sans-serif, serif",
+  fontFamily: "quicksand, sans-serif",
   margin: "-0.5em",
   height: "100%",
   width: "100%"

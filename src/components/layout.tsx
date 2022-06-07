@@ -5,78 +5,99 @@ import List  from "./List";
 import styled from "@emotion/styled"
 
 const data = {
-    education: [{
-        title: "Applied Mathematics Engineering",
-        for_i: "Queen's University",
-        info: "Applied mathematics engineering at Queen's University with the computing option.",
-        start: "2019",
-        end: "2023",
-    },
-    {
-        title: "High School",
-        for_i: "Western Canada Highschool",
-        info: "",
-        start: "2016",
-        end: "2019",
-    },
-],
     experience: [{
         title: "Quantitative Developer - Contract",
         for_i: "Feta Markets",
-        info: "",
+        info: "Researching stochastic volatility modelling for minimizing option price inefficiencies in the Black Scholes model for different asset classes.",
+        skills: ["Python Data Analysis", "MongoDB", "Python Visualizations"],
         start: "MAY 2022",
         end: "present",
+        link: "",
     },
     {
         title: "Quantitative Analyst - Contract",
         for_i: "Global Predictions",
-        info: "",
+        info: "Creating a knowledge graph that is responsible for mapping macroeconomic factors and identifying what drives markets. Custom modelled relationships created to accurately describe type of relationship, and variability of weight overtime.",
+        skills: ["Graph Algorithms", "Python Graph Data Structures", "Timeseries Analysis"],
         start: "MAY 2021",
         end: "JAN 2022",
+        link: "",
     },
     {
         title: "Student Researcher",
         for_i: "University of Calgary",
-        info: "",
+        info: "Researching the effect vision has on proprioception recovery in stroke patients using the Kinarm exoskeleton robot for data collection. ",
+        skills: ["MATLAB", "Python", "Data Science"],
         start: "MAY 2021",
         end: "AUG 2021",
+        link: "",
     },
 ],
-    projects: [{
-        title: "Cyber Fridge",
-        for_i: "",
-        info: "",
-        start: "",
-        end: "",
-    },
+    projects: [
     {
         title: "Rust P2P",
         for_i: "",
         info: "",
+        skills: [],
         start: "",
         end: "",
-    },
-    {
-        title: "Mars Rover",
-        for_i: "",
-        info: "",
-        start: "",
-        end: "",
+        link: "https://github.com/vaughanlove/rust-p2p",
     },
     {
         title: "Altcoin Screener - WIP",
         for_i: "",
         info: "",
+        skills: [],
         start: "",
         end: "",
+        link: "https://github.com/vaughanlove/eb_screener_ui",
+    },
+    {
+        title: "Autonomous Navigation",
+        for_i: "",
+        info: "",
+        skills: [],
+        start: "",
+        end: "",
+        link: "https://github.com/vaughanlove/autonomous-navigation",
+    },
+    {
+        title: "Cyber Fridge",
+        for_i: "",
+        info: "",
+        skills: [],
+        start: "",
+        end: "",
+        link: "https://github.com/vaughanlove/cyber-fridge",
+    },
+],
+    education: [{
+        title: "Applied Mathematics Engineering",
+        for_i: "Queen's University",
+        info: "Applied mathematics engineering at Queen's University with the computing option.",
+        skills: [],
+        start: "2019",
+        end: "2023",
+        link: "",
+    },
+    {
+        title: "High School",
+        for_i: "Western Canada Highschool",
+        info: "",
+        skills: [],
+        start: "2016",
+        end: "2019",
+        link: "",
     },
 ],
     activities: [{
         title: "Solana Global Fellowship",
         for_i: "Solana Labs",
         info: "had the opportunity in November 2021 for Solana Labs to sponsor me to come to their conference in Lisbon, Portugal as a Global Fellow. ",
+        skills: [],
         start: "",
         end: "",
+        link: "",
     }],
 }
 
@@ -96,7 +117,6 @@ const TopHeader = styled.div`
 const NameHeader = styled.h1`
     color: #1C2321;
     flex: 1;
-    fontFamily: Raleway;
     font-size: 4rem;
     text-align: center;
 `;
@@ -130,6 +150,7 @@ const CategoryButton = styled.button`
     background-color: #7D98A1;
     margin: 5px;
     border: 3px solid #7D98A1;
+    font-family: quicksand;
     &:hover {
         background-color: #A9B4C2;
         border-right: 4px solid #1C2321;
@@ -140,7 +161,7 @@ const CategoryButton = styled.button`
 `
 
 const Layout = ({pageTitle, children}) => {
-    const [itemName, setItemName] = useState("education");
+    const [itemName, setItemName] = useState("experience");
 
 
     return (
@@ -163,7 +184,7 @@ const Layout = ({pageTitle, children}) => {
             <CategoryBar>
                 {Object.keys(data).map(category => (
                     <CategoryButton 
-                        style={category==itemName ? {backgroundColor: '#A9B4C2', borderRight: '4px solid #1C2321', borderLeft: '1px solid #1C2321', borderTop: '1px solid #1C2321', borderBottom: '4px solid #1C2321'}: {}} 
+                        style={category==itemName ? {fontFamily: 'quicksand', fontWeight: 'bold', backgroundColor: '#A9B4C2', borderRight: '4px solid #1C2321', borderLeft: '1px solid #1C2321', borderTop: '1px solid #1C2321', borderBottom: '4px solid #1C2321'}: {}} 
                         onClick={() => setItemName(category)}
                         >{category}</CategoryButton>
                     )
